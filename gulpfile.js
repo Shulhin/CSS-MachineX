@@ -1,30 +1,30 @@
 const { src, dest, parallel, series, watch } = require('gulp'),
-		sass          	= require('gulp-sass'),
-		sourcemaps    	= require('gulp-sourcemaps'),
-		postcss			= require('gulp-postcss'),
-		cssnano			= require('cssnano'),
-		autoprefixer	= require('autoprefixer'),
-		mqpacker		= require('css-mqpacker'),
-		mqpackerSort	= require('sort-css-media-queries'),
+		sass          		= require('gulp-sass'),
+		sourcemaps    		= require('gulp-sourcemaps'),
+		postcss				= require('gulp-postcss'),
+		cssnano				= require('cssnano'),
+		autoprefixer		= require('autoprefixer'),
+		mqpacker				= require('css-mqpacker'),
+		mqpackerSort		= require('sort-css-media-queries'),
 
-		imagemin      	= require('gulp-imagemin'),
-		newer			= require('gulp-newer'),
+		imagemin      		= require('gulp-imagemin'),
+		newer					= require('gulp-newer'),
 
-		webpack			= require('webpack'),
-		gulpWebpack		= require('webpack-stream'),
-		webpackConfig 	= require('./webpack.config.js'),
-		uglify			= require('gulp-uglify-es').default,
+		webpack				= require('webpack'),
+		gulpWebpack			= require('webpack-stream'),
+		webpackConfig 		= require('./webpack.config.js'),
+		uglify				= require('gulp-uglify-es').default,
 
-		browserSync   	= require('browser-sync').create(),
-		rename			= require('gulp-rename'),
-		cachebust     	= require('gulp-cache-bust'),
-		htmlReplace		= require('gulp-html-replace'),
-		del 			= require('del');
+		browserSync   		= require('browser-sync').create(),
+		rename				= require('gulp-rename'),
+		cachebust     		= require('gulp-cache-bust'),
+		htmlReplace			= require('gulp-html-replace'),
+		del 					= require('del');
 
-const	gmWatch			= true;
-let		stateLinkStyles	= false,
-		speedMode		= false;
-		sass.compiler	= require('node-sass');
+const	gmWatch				= true;
+let	stateLinkStyles	= false,
+		speedMode			= false;
+		sass.compiler		= require('node-sass');
 
 
 // Local Server
